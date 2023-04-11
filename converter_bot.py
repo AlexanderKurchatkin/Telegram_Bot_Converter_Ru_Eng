@@ -37,7 +37,7 @@ async def send_welcome(massege: types.Message):
 async def send_echo(massege: types.Message):
     user_name = massege.from_user.full_name 
     user_id = massege.from_user.id
-    input_ru_text = massege.text
+    text = massege.text
     for key in alph_RU_ENG:
         text = text.replace(key, alph_RU_ENG[key]).upper()
     logging.info(f"{user_name=} {user_id=} sent massege: {text} ") 
